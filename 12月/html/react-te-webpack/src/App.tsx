@@ -1,9 +1,8 @@
 import * as React from 'react'
-import {Header,About} from './components'
+import {Header} from './components'
 export const App:
 React.StatelessComponent<{}>=()=>{
     return <div>
         <Header/>
-        <About/>
     </div>
 }
