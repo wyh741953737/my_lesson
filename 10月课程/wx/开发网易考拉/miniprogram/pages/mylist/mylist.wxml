@@ -1,0 +1,39 @@
+<!-- 
+<van-tabs active="{{ active }}" bind:change="onChange" lineWidth="70" >
+  <van-tab title="全部" >
+  <view class='wrap'>
+  <view class='wrap-1'></view>
+<view class='wrap_container'>
+<view class='container_1'>
+<view class='container_icon'><image src='/images/icon/cat.png'></image></view>
+<view class='container_title'>函数官方旗舰店</view>
+<view class='container_icon-2'><image src='/images/icon/great.png'></image></view>
+<view class='container_state'>买家已付款</view>
+</view>
+<view class='container_center'>
+<view class='container_image'><image src='https://img.alicdn.com/imgextra
+
+/i4/1588540611/O1CN01wDYAYK1GNsTsXOO40_!!0-item_pic.jpg_430x430q90.jpg'></image></view>
+<view class='container_right'>
+<view class="container_right_title">
+<view class="container_right_title_left">【1212价】墨菊巨补水套装女保湿爽肤水乳液护肤</view>
+<view class="container_right_title_right">
+<view class='price'>￥103.0</view>
+<view class='num'>×1</view>
+</view>
+</view>
+<view class="container_right_guige">洁面+水+乳+霜+喷雾+面膜</view>
+<view class="container_right_tuihuan">
+<view class='tui'>七天退换</view>
+<view class='jian'>满300减30</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+  </van-tab >
+  <van-tab title="待付款" >内容 2</van-tab>
+  <van-tab title="待发货" >内容 3</van-tab>
+  <van-tab title="待收货" >内容 4</van-tab>
+  <van-tab title="待评价" >内容 5</van-tab>
+</van-tabs> -->

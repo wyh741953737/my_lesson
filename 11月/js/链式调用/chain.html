@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>lodash chain</title>
+</head>
+<body>
+  <!-- lodash 常用的工具库 -->
+  <!-- <script src="https://cdn.bootcss.com/lodash.js/4.17.11/lodash.core.min.js"></script>  -->
+  <script>
+  // _ lodash 命名空间 类
+  // chain 静态方法 
+    // ? 如何判断它是链式调用？
+
+function chainResult(instance, obj) {
+    return instance._chain? _.chain(obj):obj   
+  }
+
+  var _ = function(obj) {
+    if (!(this instanceof _)) 
+    return new _(obj);
+    this._wrapped = obj;//即实现返回实例，又实现挂在wrapped
+  } 
+
+  _.prototype = {
+    push: function(num) {
+      this._wrapped.push(num);
+      return chainResult(this, this._wrapped);
+    },
+    shift: function() {
+      this._wrapped.shift();
+      return chainResult(this, this._wrapped);
+    },
+    value: function() {
+      return this._wrapped;
+    }
+  }
+
+
+  _.chain = function(obj) {
+    var instance = _(obj);//返回实例，点下去
+    instance._chain = true;
+    // 直接调用构造函数， 不 new 
+    return instance; 
+  }
+
+  
+  // _ 是 lodash 命名空间 
+  // chain 给我们链式调用的能力
+  const arr = _.chain([1,2,3,4])
+    .push(5)
+    .shift()
+    .value();
+  console.log(arr);    
+  </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+<view class="container">
+<wux-badge count="{{num}}" wux-class-badge="green_bdage"></wux-badge>
+</view>

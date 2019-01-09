@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        console.log(this);
+        var obj = {
+            
+          func: function() {},
+          say: function () {
+            var that = this;   //此时的this就是obj对象
+            setTimeout(function () {
+              console.log(this)
+              that.func()
+            });
+          }
+        }
+        obj.say();
+       </script> -->
+       <!-- <script>  
+          var obj = {  
+            func: function() {},  
+            say: function () {  
+               // 此时的this就是obj对象  
+              setTimeout(function () {  
+                console.log(this)  //{func: ƒ, say: ƒ}
+                this.func()  
+              }.bind(this));  
+            }  
+          }  
+          obj.say(); // obj  
+        </script>   -->
+        <!-- <script>
+        window.val = 1;
+        var obj = {
+        val: 2,
+      dbl: function () {
+     this.val *= 2;
+     val *= 3;
+     console.log(val);
+     console.log(this.val);
+   }
+ };
+ // 说出下面的输出结果
+ obj.dbl();
+ var func = obj.dbl;
+ func(); 
+
+</script>-->
+<!-- <script>
+    var obj = {
+      say: function () {
+        setTimeout(() => {
+          console.log(this)
+        });
+      }
+    }
+    obj.say(); // obj
+ 
+
+</script> -->
+<!-- <script>
+  var obj = {
+    func: function() {console.log("aaa")},
+    say: function () {
+      var that = this;   //此时的this就是obj对象
+      console.log(this);    //obj   func:f    say:f
+      setTimeout(function () {
+        console.log(this)//window
+      },1000);
+    }
+  }
+  obj.say();
+ obj
+ Live reload enabled.
+ Window  
+
+加了obj.func()之后结果
+(index):72 {func: ƒ, say: ƒ}
+(index):69 aaa
+(index):114 Live reload enabled.
+(index):74 Window 
+ </script> -->
+ <!-- <script>  
+  var obj = {  
+    func: function() {console.log("aa")},  
+    say: function () {  
+     setTimeout(function () {  
+        console.log(this)  //obj
+       console.log(this.func); //f (){console.log("aa")}
+      }.bind(this));  
+    }  
+  }  
+  obj.say(); // obj  
+</script>  -->
+<script>  
+  // var obj = {  
+  //   func: function() {console.log("aa")},  
+  //   say: function () {  
+  //      // 此时的this就是obj对象  
+  //     setTimeout(function () {  
+  //       console.log(this)  //obj
+  //       this.func()  //aa
+  //     }.bind(this));  
+  //   }  
+  // }  
+  // obj.say(); // obj  
+
+  var obj = {
+    birth: 1990,
+    getAge: function (year) {
+      console.log(this);
+        var b = this.birth; // 1990
+        var fn = (y) => y - this.birth; // this.birth仍是1990
+        console.log(this);
+        return fn.call({birth:2000}, year);
+    }
+};
+obj.getAge(2015); // 25
+ </script>
+</body>
+</html>

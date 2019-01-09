@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .wrap{
+        min-height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+border: 4px solid red;
+        font-family: sans-serif;
+        font-weight: 100;
+        color: white;
+
+    }
+    .box{
+        border: 4px solid yellow;
+        width: 50px;
+        height: 50px;
+        padding: 50px;
+        background:black url(http://unsplash.it/1500/1500?imgge=560&blur=0.5) center fixed no-repeat;
+transition: width .2s,height .2s;
+
+
+}    .box.opening{
+        width:500px;
+        height: 500px;
+    }
+    .box h2{
+        position: absoult;
+        width:100%;
+        font-size: 100px;
+        top: 0;
+        transform: translateX(-200%);
+        transition:  all .5s;
+    }
+    .box p{
+        position:absolute;
+        width: 100%;
+        transform: translateX(200%);
+        transition: all .5s;
+        bottom: 0;
+    }
+    .box.open>*{
+transform: translateX(0%);
+
+  }
+    </style>
+</head>
+<body>
+<div class="wrap" >
+    <div class="box">
+        <h2>Wes Bos</h2>
+        <p class="social">@Wesbos</p>
+    </div>
+</div>
+
+
+    <script>
+//祖先都是Object,prototype链
+const box=document.querySelector('.box');
+box.addEventListener('click',function()
+{
+    //this指向事件发生时,发生的元素
+console.log(this);
+let first='opening';
+let second='open';
+if(this.classList.contains(first))
+{
+    [first,second]=[second,first];
+}
+
+this.classList.toggle(first);
+//let that=this;
+    setTimeout(()=>{
+   // 函数内部的函数,新函数的作用域
+    //this 指针,如果该函数是普通函数,this指向windows
+    //console.log(this);
+    //箭头函数内部this 指向父级
+        this.classList.toggle(second);
+    },250);
+});
+        </script>
+</body>
+</html>

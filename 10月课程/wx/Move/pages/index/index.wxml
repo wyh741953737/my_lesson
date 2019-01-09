@@ -1,0 +1,7 @@
+<view class="index-containter">
+<image class='logo' src='../images/logo.png'></image>
+<text class='username' >HELLO!</text>
+<view class='btn' bindtap='gonew'>
+<text>HHHHHHHHHHHH++9HHHHhh</text>
+</view>
+ </view>

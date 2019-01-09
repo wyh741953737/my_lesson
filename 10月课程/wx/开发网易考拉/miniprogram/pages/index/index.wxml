@@ -1,0 +1,609 @@
+  <view class='container'>
+<!-- 搜索框 -->
+<view class='search'>
+ <van-search value="{{value}}" placeholder="在千万海外商品中搜索" bind:change="onChange"
+  bind:search="onSearch"/>
+</view>
+<!-- 搜索框下全部 可以滑动 -->
+<view class="container flex_vert" >
+<!-- 横向滑动 -->
+<view class="main">  
+<swiper wx:if="{{ads.length}}" autoplay="true" indicator-dots="true" circular="true" >
+<block wx:for="{{ads}}" wx:for-item="ad" wx:key="ad._id">
+<swiper-item>
+<image src='{{ad.pic}}' data-id="{{ad._id}}" mode='aspectFill'></image>
+</swiper-item>
+</block>
+</swiper>
+</view>
+<!-- 两行item -->
+<view class='item'>
+<view class='item-top'>
+<navigator>
+<image src='../../images/icon/item-chaozhi.png'style="width:45px;height:45px;"></image>
+<view>超值拼团</view></navigator>
+<navigator>
+<view class='kanjia'style="width:45px;height:45px;background-color:yellow;border-radius:50%">0</view>
+<view>0元砍价</view></navigator>
+<navigator><image src='../../images/icon/item-choujiang.png'style="width:45px;height:45px;"></image><view>每日抽奖</view></navigator>
+<navigator><image src='../../images/icon/item-qianghongbao.png'style="width:45px;height:45px;"></image><view>抢红包</view></navigator>
+<navigator><image src='../../images/icon/item-lingxianjin.png'style="width:45px;height:45px;"></image><view>领现金</view></navigator>
+</view>
+<view class='item-buttom'>
+<navigator><image src='../../images/icon/item-liwu.png'style="width:45px;height:45px;"></image><view>礼物精选</view></navigator>
+<navigator><image src='../../images/icon/item-meirong.png'style="width:45px;height:45px;"></image><view>美容个护</view></navigator>
+<navigator><image src='../../images/icon/item-muying.png'style="width:45px;height:45px;"></image><view>母婴</view></navigator>
+<navigator><image src='../../images/icon/item-quanqiu.png'style="width:45px;height:45px;"></image><view>全球超市</view></navigator>
+<navigator><image src='../../images/icon/item-dian.png'style="width:45px;height:45px;"></image><view>全球好店</view></navigator>
+</view>
+</view>
+<!-- 女神节图片 -->
+<view class="jieri" style='height:180rpx'>
+ <image src='http://img3.imgtn.bdimg.com/it/u=1135268699,1722558640&fm=26&gp=0.jpg'></image> 
+</view>
+
+
+<view class="warp" style='height:1430rpx;'>
+<view class='section-1'>
+<view  class='section-top-left'>
+<navigator id='picture'>
+<image src='../../images/icon/skin.png'></image>
+</navigator>
+</view>
+<view  class='section-top-right'>
+<navigator id='picture'>
+<image src='../../images/icon/bao.png'></image>
+</navigator>
+</view>
+</view>
+<view class='section-2'>
+<view  class='section-top-left'>
+<navigator id='picture'>
+<image src='../../images/icon/bao.png'></image>
+</navigator>
+</view>
+<view  class='section-top-right'>
+<navigator id='picture'>
+<image src='../../images/icon/skin.png'></image>
+</navigator>
+</view>
+</view>
+
+<view class='haowu'>
+<view class='circle-1'>
+<view class='circle-white'></view>
+<view class='circle-red'></view>
+</view>
+<view class='circle-center'>黑五好物大揭秘</view>
+<view class='circle-1'>
+<view class='circle-white2'></view>
+<view class='circle-red2'></view>
+</view>
+</view>
+<view class='section-1'>
+<view  class='section-top-left'>
+<navigator id='picture'>
+<image src='http://cdn.pinduoduo.com/assets/img/pdd_super_spike_v1.jpg'></image>
+</navigator>
+</view>
+<view  class='section-top-right'>
+<navigator id='picture'>
+<image src='http://cdn.pinduoduo.com/assets/img/cat_beauty.jpg'></image>
+</navigator>
+</view>
+</view>
+<view class='section-4'>
+<view  class='section-item-left'>
+<navigator id='picture-2'>
+<image src='http://cdn.pinduoduo.com/assets/img/pdd_act_brand.jpg'></image>
+</navigator>
+</view>
+<view  class='section-item-right'>
+<navigator id='picture-2'>
+<image src='http://cdn.pinduoduo.com/assets/img/pdd_global.jpg'></image>
+</navigator>
+</view>
+<view  class='section-item-center'>
+<navigator id='picture-2'>
+<image src='https://haitao.nos.netease.com/irpoekmi56_960_480.jpg?imageView&thumbnail=540x270&quality=90'></image>
+</navigator>
+</view>
+</view>
+<view class='haowu'>
+<view class='circle-1'>
+<view class='circle-white'></view>
+<view class='circle-red'></view>
+</view>
+<view class='circle-center'>黑五时尚生活集</view>
+<view class='circle-1'>
+<view class='circle-white2'></view>
+<view class='circle-red2'></view>
+</view>
+</view>
+
+<view class='section-1'>
+<view  class='section-top-left'>
+<navigator id='picture'>
+<image src='https://haitao.nos.netease.com/iojhfgbk26_960_480.jpg?imageView&thumbnail=540x270&quality=90'></image>
+</navigator>
+</view>
+<view  class='section-top-right'>
+<navigator id='picture'>
+<image src='https://haitao.nos.netease.com/1clbfh3m836_960_480.jpg?imageView&thumbnail=540x270&quality=90'></image>
+</navigator>
+</view>
+</view>
+<view class='section-2'>
+<view  class='section-top-left'>
+<navigator id='picture'>
+<image src='https://haitao.nos.netease.com/ii01iald85_960_480.jpg?imageView&thumbnail=540x270&quality=90'></image>
+</navigator>
+</view>
+<view  class='section-top-right'>
+<navigator id='picture'>
+<image src='https://haitao.nos.netease.com/1c1mv691e40_960_480.jpg?imageView&thumbnail=540x270&quality=90'></image>
+</navigator>
+</view>
+</view>
+
+<view class='haowu'>
+<view class='circle-1'>
+<view class='circle-white'></view>
+<view class='circle-red'></view>
+</view>
+<view class='circle-center'>黑五品质生活集</view>
+<view class='circle-1'>
+<view class='circle-white2'></view>
+<view class='circle-red2'></view>
+</view>
+</view>
+<view class='section-4'>
+<view  class='section-item-left'>
+<navigator id='picture-2'>
+<image src='https://haitao.nos.netease.com/1bmiv802068_800_800.jpg?imageView&thumbnail=400x0&quality=85'></image>
+</navigator>
+</view>
+<view  class='section-item-right'>
+<navigator id='picture-2'>
+<image src='https://haitao.nos.netease.com/4b4e37c9d1c54b8883bf81f1b0cfd2f715290670481551.jpg?imageView&thumbnail=400x0&quality=85'></image>
+</navigator>
+</view>
+<view  class='section-item-center'>
+<navigator id='picture-2'>
+<image src='https://haitao.nos.netease.com/3307d3869dbe4508bc44139579359a7c1538188020752jmmtfks910528.jpg?imageView&thumbnail=400x0&quality=85'></image>
+</navigator>
+</view>
+</view>
+</view>
+
+
+<view class="warp-2" style='height:1070rpx'>
+<view class='main-title'>
+<view class='title-pin'>
+<view class='title-left'>超值拼团好物</view>
+<view class='see-more'>查看更多</view>
+</view>
+
+
+
+<view class='swiper_item'>
+<swiper autoplay="{{false}}" indicator-dots="true" circular="true" style='height:800rpx;'indicator-active-color="red" interval="2000" >
+<swiper-item >
+<view  class='bc_1 swiper_view'>
+<view class='swiper_top item_1'>
+<view class='swiper_view_top item_1-top'>
+<view class='num' >已团100件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://haitao.nos.netease.com/aae507c4c83845fe933e966be51e16171536136079498jlovrcs410703.jpg?imageView&thumbnail=262x262&quality=90'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥24</view>
+<view class='items item_1_text-price'>单价买￥24</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团200件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://haitao.nos.netease.com/8209a54be0214597b1ab2fbfaf9c19301532948303500jk85u92y10723.jpg?imageView&thumbnail=194x194&quality=95&type=webp'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团300件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://haitao.nosdn2.127.net/1bmbrcehk2_800_800.jpg?imageView&thumbnail=194x194&quality=95&type=webp'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+</view>
+</view>
+<view  class='bc_2 swiper_view'>
+<view class='swiper_top item_2'>
+<view class='swiper_view_top item_1-top'>
+<view class='num' >已团400件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://haitao.nosdn2.127.net/e44cfa2d0b8d4ebf8eae664c636632331524726077902jgg6jf7b11762.jpg?imageView&thumbnail=194x194&quality=95&type=webp'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥24</view>
+<view class='items item_1_text-price'>单价买￥24</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团500件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://haitao.nosdn2.127.net/iv3lvwfp17_800_800.jpg?imageView&thumbnail=194x194&quality=95&type=webp'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团600件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://haitao.nosdn2.127.net/c6280c38599242819984bdb4bfb10df21543372643928jp0k81mu12595.jpg?imageView&thumbnail=194x194&quality=95&type=webp'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+</view>
+</view>
+</swiper-item>
+<swiper-item>
+<view  class='bc_1 swiper_view'>
+<view class='swiper_top item_1'>
+<view class='swiper_view_top item_1-top'>
+<view class='num' >已团700件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://pop.nosdn.127.net/7d2208f7-8ee0-4ca5-b8c2-d4bd6295d88a?imageView&thumbnail=262x0&quality=85'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥24</view>
+<view class='items item_1_text-price'>单价买￥24</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团800件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://haitao.nos.netease.com/fec9481906734ef5b527a8dbe31cbea31522157569075jf9pbd3x18165.jpg?imageView&thumbnail=262x262&quality=90'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团900件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://pop.nosdn.127.net/80f14eec-4c44-41a8-83df-54e8316dc7e4?imageView&thumbnail=262x0&quality=85'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+</view>
+</view>
+<view  class='bc_2 swiper_view'>
+<view class='swiper_top item_2'>
+<view class='swiper_view_top item_1-top'>
+<view class='num' >已团1000件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://haitao.nos.netease.com/470489e1ce69418b83e6c99755fde7141534128695393jkrom5ai10204.jpg?imageView&thumbnail=400x0&quality=85'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥24</view>
+<view class='items item_1_text-price'>单价买￥24</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团1100件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://pop.nosdn.127.net/61061e43-f065-47ed-850c-cab29dbab517?imageView&thumbnail=262x0&quality=85'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团1200件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://pop.nosdn.127.net/3f144e0e-12f3-4ad6-a937-da3e43a8211a?imageView&thumbnail=262x0&quality=85'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+</view>
+</view>
+</swiper-item>
+<swiper-item >
+<view  class='bc_1 swiper_view'>
+<view class='swiper_top item_1'>
+<view class='swiper_view_top item_1-top'>
+<view class='num' >已团1300件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://pop.nosdn.127.net/2dd3e243-b2dc-4ed7-87d6-1fac75c9f052?imageView&thumbnail=262x0&quality=85'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥24</view>
+<view class='items item_1_text-price'>单价买￥24</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团1400件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://pop.nosdn.127.net/bb0b7472-e6b4-4099-bce6-6b6ad743ac2d?imageView&thumbnail=262x0&quality=85'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团1500件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://haitao.nos.netease.com/1bn5cks6s10_800_800.jpg?imageView&thumbnail=262x0&quality=85'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+</view>
+</view>
+<view  class='bc_2 swiper_view'>
+<view class='swiper_top item_2'>
+<view class='swiper_view_top item_1-top'>
+<view class='num' >已团1600件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://pop.nosdn.127.net/fa3eaee1-4ee1-48c1-9c7e-c118adc4b518?imageView&thumbnail=262x0&quality=85'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥24</view>
+<view class='items item_1_text-price'>单价买￥24</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+
+
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团1700件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://pop.nosdn.127.net/48677c66-ae48-466a-aece-af0d650571cf?imageView&thumbnail=262x0&quality=85'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+
+
+</view>
+<view class='swiper_view_top item_2-top'>
+<view class='num' >已团1800件</view>
+<view class='swiper_view_top item_1_top_image'>
+<image src='https://pop.nosdn.127.net/a8f0c1c6-476e-4c6c-a3c2-01f75320fed1?imageView&thumbnail=262x0&quality=85'></image>
+</view>
+<view class='swiper_view_top item_1_buttom'>
+<view class='items item_1_text'>2人团￥65</view>
+<view class='items item_1_text-price'>单价买￥80</view>
+<view class='items item_text-pin'><navigator>去拼团</navigator></view>
+</view>
+</view>
+</view>
+</view>
+</swiper-item>
+</swiper>
+
+</view>
+<view class='swiper-view-item'>
+<view class='swiper-view-item-left'>
+<navigator><image src='../../images/icon/bei2.png'></image></navigator>
+</view>
+<view class='swiper-view-item-right'>
+<navigator><image src='../../images/icon/fuzhuang.png'></image></navigator>
+</view>
+</view>
+
+
+</view>
+</view>
+
+<view class='time-purchase'>
+<view class='time-show'>
+<view class='time-shoe-text'>限时购</view>
+<view class='time-internet'>
+<view class='hour'>{{clock}}</view>
+<view class='symbol'></view>
+<view class='minite'>{{ms}}</view>
+<view class='symbol'></view>
+<view class='second'>{{ss}}</view>
+</view>
+<view class='time-show-count'>14点场</view>
+<view class='see-more'>查看更多</view>
+</view>
+<view class='purchase-items'>
+<view class='purchase-item'>
+<view class='purchase-item-left'><image src='https://haitao.nosdn2.127.net/1bii8em8143_800_800.jpg?imageView&thumbnail=194x194&quality=95&type=webp'></image></view>
+<view class='purchase-item-right'>
+<view class='purchase-item--right-text'>【BIODERMA 贝德玛】 舒妍温和保湿卸妆水 粉水 500毫升 2瓶装</view>
+<view class='purchase-item--right-item-1'>
+<view class="purchase-item--right-item-1-left">5.2折</view>
+<view class="purchase-item--right-item-1-right">满2件8折</view>
+</view>
+<view class='purchase-item--right-item-2'>
+<view class='purchase-item-right-item-2-left'><view class='fuhao'>￥</view>120</view>
+<view class='purchase-item-right-item-2-right'>去抢购</view>
+</view> 
+<view class='purchase-purchased-num'>
+<view class='purchase-purchased-price'>￥100</view>
+<view class='purchase-purchased-price-num' >已售{{percent1}}%</view>
+<view class='progress-percent'>
+<van-progress
+show-pivot="{{false}}"
+color='red'
+percentage="{{percent1}}"
+/>
+</view>
+</view>
+</view>
+</view>
+<view class='purchase-item'>
+<view class='purchase-item-left'><image src='https://haitao.nos.netease.com/00434c53b9b345e493861c2cad65bc651536740106545jlyvdqzs10519.jpg?imageView&thumbnail=244x244&quality=95&type=webp'></image></view>
+<view class='purchase-item-right'>
+<view class='purchase-item--right-text'>【【1212预付】【PONY同款】NYX 3CP六色遮瑕盘 高光修容阴影痘印黑眼圈遮盖9克</view>
+<view class='purchase-item--right-item-1'>
+<view class="purchase-item--right-item-1-left">3.2折</view>
+<view class="purchase-item--right-item-1-right">满199减100</view>
+</view>
+<view class='purchase-item--right-item-2'>
+<view class='purchase-item-right-item-2-left'><view class='fuhao'>￥</view>80</view>
+<view class='purchase-item-right-item-2-right'>去抢购</view>
+</view> 
+<view class='purchase-purchased-num'>
+<view class='purchase-purchased-price'>￥120</view>
+<view class='purchase-purchased-price-num' >已售{{percent2}}%</view>
+<view class='progress-percent'>
+<van-progress
+show-pivot="{{false}}"
+color='red'
+  percentage="{{percent2}}"
+/>
+</view>
+</view>
+</view>
+</view>
+<view class='purchase-item'>
+<view class='purchase-item-left'><image src='https://haitao.nos.netease.com/0023c424fcde412c959e2ea634f8c27c1542878915272jose9q5p10811.JPG?imageView&thumbnail=400x0&quality=85'></image></view>
+<view class='purchase-item-right'>
+<view class='purchase-item--right-text'>【魏璎珞同款色号】MAC 魅可 时尚唇膏 3克</view>
+<view class='purchase-item--right-item-1'>
+<view class="purchase-item--right-item-1-left">3.0折</view>
+<view class="purchase-item--right-item-1-right">满199减100</view>
+</view>
+<view class='purchase-item--right-item-2'>
+<view class='purchase-item-right-item-2-left'><view class='fuhao'>￥</view>110</view>
+<view class='purchase-item-right-item-2-right'>去抢购</view>
+</view> 
+<view class='purchase-purchased-num'>
+<view class='purchase-purchased-price'>￥150</view>
+<view class='purchase-purchased-price-num' >已售{{percent3}}%</view>
+<view class='progress-percent'>
+<van-progress
+show-pivot="{{false}}"
+color='red'
+  percentage="{{percent3}}"
+/>
+</view>
+</view>
+</view>
+</view>
+<view class='purchase-more'>更多场次 ></view>
+</view>
+</view>
+<view class='last-item'>
+<view class='last-item-1'>
+<view class='last-item-1-title'>美妆个护</view>
+<view class='last-item-1-price'>99元选4件</view>
+<view class='last-item-1-image'>
+<image src='https://haitao.nosdn1.127.net/1bkm2of3t33_800_800.jpg?imageView&thumbnail=430x430'></image>
+</view>
+</view>
+<view class='last-item-2'>
+<view class='last-item-1-title'>生活家居</view>
+<view class='last-item-1-price'>99元选3件</view>
+<view class='last-item-1-image'>
+<image src='https://haitao.nos.netease.com/59bcb04d64734254844d5b26e39d78b61509530543358j9gvidos11254.jpg?imageView&thumbnail=360x360&quality=85'></image>
+
+</view>
+</view>
+<view class='last-item-3'>
+<view class='last-item-1-title'>轻奢配饰</view>
+<view class='last-item-1-price'>施华5折起</view>
+<view class='last-item-1-image'>
+<image src='https://haitao.nos.netease.com/0926920ab38d453eb702c4a331dc766c1533871896974jknfq2d712154.jpg?imageView&thumbnail=262x262&quality=90'></image>
+</view>
+</view>
+<view class='last-item-4'>
+<view class='last-item-1-title'>营养保健</view>
+<view class='last-item-1-price'>底价直邮</view>
+<view class='last-item-1-image'>
+<image src='https://haitao.nos.netease.com/3df26fcd6be547239547f38a4725bbfc1543311940201jozk2ybl12405.jpg?imageView&thumbnail=262x262&quality=90'></image>
+</view>
+</view>
+</view>
+<view class='like'>猜你喜欢</view>
+<view style="display:none">
+  <image wx:for="{{images}}" wx:key="index" data-id="{{item.id}}" src="{{item.pic}}" bindload="onImageLoad"/>
+</view>
+<view>
+<scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" lower-threshold="200" style='height:2500px;' class='likes'>
+<view class='like_inner'>
+<view class='like_col likes_col-left'>
+<view wx:for="{{col1}}" wx:key="_id">
+<view class='like-item'>
+<image style='width:100%;height:{{item.height}}px;' src='{{item.pic}}'></image>
+<view class='like-item-content'>
+<view class='like-item_title'>{{item.title}}</view>
+<view class='like-item_inform'>
+<view class='like-price'>{{item.price}}</view>
+<view class='like-priced'>{{item.priced}}</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+<view class='like_col'>
+<view wx:for="{{col2}}" wx:key="_id">
+<view class='like-item'>
+<image style='width:100%;height:{{item.height}}px;' src='{{item.pic}}'></image>
+<view class='like-item-content'>
+<view class='like-item_title'>{{item.title}}</view>
+<view class='like-item_inform'>
+<view class='like-price'>{{item.price}}</view>
+<view class='like-priced'>{{item.priced}}</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+
+</view>
+</scroll-view>
+</view>
+
+
+
+
+
+</view>
+</view>
+  
+  

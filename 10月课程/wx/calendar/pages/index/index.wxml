@@ -1,0 +1,9 @@
+
+<view class="calendar">
+<calendar weeks-type="full-en"cell-size="30" next="{{false}}" prev="{{false}}"show-more-days="{{true}}" calendar-style="demo6-calendar" header-style="calendar-header" border-style="calendar-board"/>
+
+</view>
+<view class='iconfont'>
+<icon type="edit"></icon>
+<icon type="home"></icon>
+</view>、

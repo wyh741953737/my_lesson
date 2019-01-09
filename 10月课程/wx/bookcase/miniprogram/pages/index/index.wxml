@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view wx:for="{{book_list}}" wx:key="index" class="container">
+
+  
+</view>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IndexDB</title>
+</head>
+<body>
+<script>
+
+const request = window.indexedDB.open('kft', 1);
+let db;
+request.onerror = function(event) {
+  // 不支持这个api, 硬盘空间不够
+  console.log('数据库打开报错');
+}
+request.onsuccess = function() {
+  db = request.result;
+  console.log('opened', db);
+  add();
+}
+request.onupgradeneeded = function(event) {
+  console.log('upgrade');
+  db = event.target.result;
+  let objectStore;  //table collection 存储对象集合的地方
+  if (!db.objectStoreNames.contains('person')) {
+    objectStore = db.createObjectStore('person', { keyPath: 'id' });
+    objectStore.createIndex('name', 'name', { unique: false});
+    objectStore.createIndex('email', 'email', {unique: true});
+  }
+}
+function add() {
+  // 索引 index  createIndex 查询meet 索引
+  // 事务 add 
+  const request = db.transaction(['person'], 'readwrite')
+  .objectStore('person')
+  .add({ id: 1, name: '张三', age: 22, single: true, email: 'zhangsan@example.com'})
+  request.onsuccess = function(event) {
+    console.log('数据存储成功');
+  }
+  request.onerror = function() {
+    console.log('数据写入失败');
+  }
+
+}
+
+</script>
+</body>
+</html>

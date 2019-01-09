@@ -1,0 +1,147 @@
+/* .wrap
+{
+  background: #f1f1f1;
+  height: 9000px;
+  width: 100%;
+}
+.wrap-1{
+  height: 20px;
+  background: #f1f1f1;
+}
+.wrap_container{
+  width: 96%;
+  margin-left: 2%;
+  height: 250px;
+  background: white;
+
+  border-radius: 10px;
+
+}
+.container_1{
+  height: 30px;
+
+  display: flex;
+
+}
+.container_icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  margin-top: 4rpx;
+}
+.container_icon-2{
+  width: 40rpx;
+  height: 30rpx;
+ 
+  margin-top: 3rpx;
+}
+.container_icon image{
+  max-width: 100%;
+  max-height: 100%;
+}
+.container_icon-2  image{
+ max-width: 100%;
+  max-height: 100%;
+}
+.container_title{
+  width: 280rpx;
+}
+.container_state
+{
+   width: 160rpx;
+}
+.container_title{
+  font-size: 24rpx;
+  line-height: 60rpx;
+  margin-left: 32rpx;
+
+}
+.container_state{
+width: 200rpx;
+ font-size: 24rpx;
+ color: red;
+ margin-left:340rpx;
+ line-height: 60rpx;
+}
+.container_center{
+  height: 260rpx;
+  display: flex;
+
+}
+.container_image{
+
+  height: 220rpx;
+  width: 220rpx;
+  margin-top: 20rpx;
+}
+.container_right{
+  
+  height: 220rpx;
+  width: 540rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.container_right_title{
+  height:80rpx;
+   width: 540rpx;
+   display: flex;
+   
+}
+.container_right_guige{
+  height:40rpx;
+   width: 540rpx;
+   display: flex;
+   
+}
+.container_right_title_left{
+  font-size: 20rpx;
+  width: 400rpx;
+  margin-top:6rpx;
+ 
+}
+.price{
+  height: 40rpx;
+font-size: 20rpx;
+margin-left: 40rpx;
+margin-top:6rpx;
+}
+.num{
+  height: 20rpx;
+width: 10px;
+font-size: 12px;
+margin-left:40px;
+color: #9e9e9e;
+
+}
+.num image{
+  max-width: 100%;
+  max-height: 100%;
+}
+.container_right_guige{
+  font-size: 12px;
+  color: #9e9e9e;
+}
+.container_right_tuihuan{
+  display: flex;
+  margin-top: 5px;
+}
+.tui{
+  width: 50px;
+  height: 20px;
+  background: #ffea8a;
+  font-size: 12px;
+  color: #ffa363;
+}
+.jian{
+   width:60px;
+  height: 20px;
+  background: #fce187;
+  color: #ffa363;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.container_image image{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 6px;
+} */

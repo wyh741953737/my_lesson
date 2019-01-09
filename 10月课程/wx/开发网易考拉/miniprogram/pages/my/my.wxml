@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view class="container" >
+  <view class="userinfo" style='background-image: url(../../images/icon/tap.jpg);'>
+    <block wx:if="{{userInfo}}">
+      <view class='userinfo--avatar'>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}} "         mode="cover"></image>
+      </view>
+      <view class='userinfo--desc'>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <view class='userinfo-num'>{{userInfo.city}}</view>
+      </view>
+   </block>
+  </view>
+
+
+
+<navigator class='order'>
+ <view class='myorder'>
+ <navigator class='myorder_list'>
+ <div class='myorder-all'>我的订单</div>
+ <div class='myorder-see'>查看全部<span class='sep'>></span></div> 
+ </navigator>
+</view>
+</navigator>
+
+<ul class='order_list'>
+<li class="all_list" ><a href="" user="true" rel="" data-param=""><view><image class="image-order" src="../../images/icon/alllist.png"></image></view>
+<view>全部订单</view></a>
+</li>
+<li class="all_list" ><a  href="" user="true" rel="" data-param=""><view><image class="image-order" src="../../images/icon/daifukuan.png"></image></view>
+<view>待付款</view></a>
+</li>
+<li class="all_list" ><a href="" user="true" rel="" data-param=""><view><image class="image-order" src="../../images/icon/daishouhuo.png"></image></view>
+<view>待收货</view></a>
+</li>
+<li class="all_list" ><a  href="" user="true" rel="" data-param=""><view><image class="image-order" src="../../images/icon/daifahuo.png"></image></view>
+<view>待发货</view></a>
+</li>
+<li class="all_list" ><a href="" user="true" rel="" data-param=""><view><image class="image-order" src="../../images/icon/daishouhuo.png"></image></view>
+<view>待收货</view></a>
+</li>
+<li class="all_list" ><a href="" user="true" rel="" data-param=""><view><image class="image-order" src="../../images/icon/tuihuo.png"></image></view>
+<view>退货退款</view></a>
+</li>
+</ul>
+
+<view class='others'>
+<ul class='others_ul'>
+<li class='orders_my1'><navigator  class='others_my'>我的优惠券</navigator></li>
+<li class='orders_my1'><navigator  class='others_my'>我的红包</navigator></li>
+<li class='orders_my1'><navigator  class='others_my'>联系客服</navigator></li>
+<li class='orders_my1'><navigator class='others_my'>账号切换</navigator></li>
+</ul>
+</view>
+
+
+
+
+
+</view>

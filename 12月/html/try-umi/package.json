@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "antd-mobile": "^2.2.8",
+    "react-sticky": "^6.0.3"
+  }
+}

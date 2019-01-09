@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" id="salary"/>
+
+    <script>
+    //  任务：给财务提供计算工具 
+    const salaryInput=document.getElementById('salary');
+    salaryInput.addEventListener('change',
+    function()
+    {
+        let salary=Number(this.value);//强制类型转换
+        console.log(salary,typeof salary);
+        alert(salary*(12+2.5));//隐性类型转换，输入框哪怕是数字，类型是`string
+
+    });
+    /*
+    *计算全年工资
+    @params salary number
+    @params level default C,in “ABCD”
+    @return number
+    
+*/
+    function totalSalary(salary, level = 'C') {
+  // if (level != 'A' && level != 'B' && level != 'C' && level != 'D') {
+  //   throw new Error('请选择绩效等级');
+  // }
+
+  console.log(arguments);
+
+  if (arguments.length == 0) {
+    throw new Error('请输入工资');
+  }
+
+   salary = Number(salary);
+
+  if (salary <= 0) {
+    throw new Error('工资输入错误， 请检查')
+  }
+
+  if ('ABCD'.indexOf(level) < 0) {
+    throw new Error('请选择绩效等级');
+  }
+  if(arguments.length>2 && arguments[2]=='admin')
+  {
+return salary*(100+performanceA());
+  }
+
+  // 工资的严格性 
+
+  // 比较靠谱
+  if (level === 'A') {
+    return performanceA(salary);
+  }
+
+  if (level === 'B') {
+    return salary * (12 + 4); 
+  }
+
+  if (level === 'C') {
+    return salary * (12 + 2.5); 
+  }
+
+  if (level === 'D') {
+    return salary * 12; 
+  }
+
+  
+}
+      function performanceA(salary)
+      {
+          return salary*18;
+      }
+        </script>
+</body>
+</html>

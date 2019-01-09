@@ -1,0 +1,13 @@
+<import src="../../components/travelCircle/travelCircle.wxml"/>
+
+<view class="container">
+  <view class="adInfos">
+    <swiper wx:if="{{ads.length}}" autoplay="true" indicator-dots="true" circular="true" style='border:1px solid red'>
+      <block wx:for="{{ads}}" wx:for-item="ad" wx:key="ad._id">
+        <swiper-item>
+          <image src="{{ad.pic}}" data-id="{{ad._id}}" mode="aspectFill"/>
+        </swiper-item>
+      </block>
+    </swiper>    
+  </view>
+  </view>

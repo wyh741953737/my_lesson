@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #waitImg {
+          opacity: 0;
+        }
+        #waitImg.fadeIn{
+            animation: show 2s forwards;
+        }
+        @keyframes show{
+            to{
+                opacity: 1;
+            }
+        }
+        </style>
+</head>
+<body>
+    <Script> 
+    const worker=new Worker('work.js');//新建一个 Worker 线程。
+    //然后，主线程调用worker.postMessage()方法，向 Worker 发消息。
+    worker.postMessage({
+        cmd:'start',
+        msg:'下载图片'
+      });
+      worker.onmessage=function(event){
+          console.log('Received message'+event.data);
+          doSomething();
+      }
+      function doSomething(){
+         const url = 'http://img10.360buyimg.com/img/s600x600_jfs/t3586/215/2086933702/144606/c5885c8b/583e2f08N13aa7762.png';
+         const oImg = document.getElementById('waitImg');
+          const img = document.createElement('img');
+            img.style.display = 'none';
+            img.src = url;
+         oImg.classList.add('fideIn');
+             img.onload = function() {
+                oImg.src = url;
+                 }
+                    document.body.appendChild(img);
+
+          worker.postMessage('work done');
+          worker.terminate();
+      }
+     
+    </Script>
+</body>
+</html>

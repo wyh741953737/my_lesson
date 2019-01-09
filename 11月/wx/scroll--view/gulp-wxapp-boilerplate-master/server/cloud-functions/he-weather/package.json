@@ -1,0 +1,14 @@
+{
+  "name": "heweather",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wyh741953737 <741953737@qq.com> (git@github.com:wyh741953737/qm_lesson.git)",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}

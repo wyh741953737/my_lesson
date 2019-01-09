@@ -1,0 +1,131 @@
+<!--全部订单页  -->
+  <!--选项卡标题  -->
+
+<scroll-view scroll-y="true" bindscroll="scroll" class="scroll-view_H list-liu">
+  <view class="scroll-view-item_H swiper-tab-list {{currentTab==0?'on':''}}" data-current="0" bindtap="swichNav" hover-class="eee">全部</view>
+  <view class="scroll-view-item_H swiper-tab-list {{currentTab==1?'on':''}}" data-current="1" bindtap="swichNav" hover-class="eee">待付款</view>
+  <view class="scroll-view-item_H swiper-tab-list {{currentTab==2?'on':''}}" data-current="2" bindtap="swichNav" hover-class="eee">待发货</view>
+  <view class="scroll-view-item_H swiper-tab-list {{currentTab==3?'on':''}}" data-current="3" bindtap="swichNav" hover-class="eee">已发货</view>
+  <view class="scroll-view-item_H swiper-tab-list {{currentTab==4?'on':''}}" data-current="4" bindtap="swichNav" hover-class="eee">已完成</view>
+</scroll-view>
+  
+<!-- 选项卡内容 -->
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange" style="height:{{clientHeight?clientHeight+'px':'auto'}}">  
+    <!-- 全部订单 内容 --> 
+  <swiper-item>  
+    <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+      <view class="kong"></view>
+      <!--写入显示内容  -->
+      <view class="list" wx:for="{{carts}}" wx:key="*this">
+        <!-- 图片 -->
+        <view class="pic">
+          <image src="{{item.imgurl}}"></image>
+        </view>
+        <!-- 类型表述 -->
+        <view class="con">
+          <text class="type1">{{item.type1}}</text>
+          <text class="type2">{{item.type2}}</text>
+        </view>
+        <!-- 价格 -->
+        <view class="price">
+          <text class="price1">￥{{item.price}}</text>
+          <text class="number">×{{item.num}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>  
+    <!-- 待付款 内容 --> 
+  <swiper-item>  
+    <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+      <view class="kong"></view>
+      <!--写入显示内容  -->
+      <view class="list" wx:for="{{carts}}" wx:key="*this">
+        <!-- 图片 -->
+        <view class="pic">
+          <image src="{{item.imgurl}}"></image>
+        </view>
+        <!-- 类型表述 -->
+        <view class="con">
+          <text class="type1">{{item.type1}}</text>
+          <text class="type2">{{item.type2}}</text>
+        </view>
+        <!-- 价格 -->
+        <view class="price">
+          <text class="price1">￥{{item.price}}</text>
+          <text class="number">×{{item.num}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>  
+    <!-- 待发货 内容 -->
+  <swiper-item>  
+    <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+      <view class="kong"></view>
+      <!--写入显示内容  -->
+      
+      <view class="list" wx:for="{{carts}}" wx:key="*this">
+        <!-- 图片 -->
+        <view class="pic">
+          <image src="{{item.imgurl}}"></image>
+        </view>
+        <!-- 类型表述 -->
+        <view class="con">
+          <text class="type1">{{item.type1}}</text>
+          <text class="type2">{{item.type2}}</text>
+        </view>
+        <!-- 价格 -->
+        <view class="price">
+          <text class="price1">￥{{item.price}}</text>
+          <text class="number">×{{item.num}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>  
+    <!-- 已发货 内容 -->
+  <swiper-item>  
+    <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+      <view class="kong"></view>
+      <!--写入显示内容  -->
+      <view class="list" wx:for="{{carts}}" wx:key="*this">
+        <!-- 图片 -->
+        <view class="pic">
+          <image src="{{item.imgurl}}"></image>
+        </view>
+        <!-- 类型表述 -->
+        <view class="con">
+          <text class="type1">{{item.type1}}</text>
+          <text class="type2">{{item.type2}}</text>
+        </view>
+        <!-- 价格 -->
+        <view class="price">
+          <text class="price1">￥{{item.price}}</text>
+          <text class="number">×{{item.num}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item> 
+    <!-- 已完成 内容 -->
+  <swiper-item>  
+    <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+      <view class="kong"></view>
+      <!--写入显示内容  -->
+      <view class="list" wx:for="{{carts}}" wx:key="*this">
+        <!-- 图片 -->
+        <view class="pic">
+          <image src="{{item.imgurl}}"></image>
+        </view>
+        <!-- 类型表述 -->
+        <view class="con">
+          <text class="type1">{{item.type1}}</text>
+          <text class="type2">{{item.type2}}</text>
+        </view>
+        <!-- 价格 -->
+        <view class="price">
+          <text class="price1">￥{{item.price}}</text>
+          <text class="number">×{{item.num}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item> 
+</swiper>
+

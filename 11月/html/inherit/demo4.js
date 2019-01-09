@@ -1,0 +1,10 @@
+let str="aaa";console.log(typeof str);
+let num=1;console.log(typeof num);
+let bool=true;console.log(typeof bool);
+let n=null;console.log(typeof n);
+let u=undefined;console.log(typeof u);
+let array=[];console.log(typeof array);
+let object={};console.log(object);
+let fn=function(){};console.log(fn);
+let regexp=/^\d+$/;console.log(regexp);
+let data=new DataCue();console.log(data);

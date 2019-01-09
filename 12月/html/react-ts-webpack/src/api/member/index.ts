@@ -14,7 +14,7 @@ const fetchMembers = ():Promise<MemberEntity[]> => {
 const fetchMembersAsync = ():Promise<MemberEntity[]>=>{
     const membersURL = `${baseURL}/members`;
     return fetch(membersURL)
-            .then(response => response.json())
+            .then(res => res.json())
             .then(mapToMembers);
 }
 const mapToMembers = (githubMembers:any[]):MemberEntity[] => {

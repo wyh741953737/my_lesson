@@ -1,0 +1,11 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "description": "本文来自 芥末酱哈 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/qq_29545573/article/details/78388145?utm_source=copy ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

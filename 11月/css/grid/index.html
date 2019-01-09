@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>双飞翼布局</title>
+  <style>
+  *{
+      margin: 0;
+      padding: 0;
+  }
+  .header,.footer{
+      text-align: center;
+      width: 100%;
+      background-color: #bbbbbb;
+  }
+  .text{
+      text-align:center;
+      line-height: 200px;
+      font-size: 26px;
+      color: white;
+  }
+  .bd{
+     
+      overflow: hidden;
+
+  }
+  .main{
+      width: 100%;
+      float: left;
+      height: 200px;
+      background-color: pink;
+      text-align: center;
+  }
+  .main-content{
+   text-align: center;
+     }
+.left{
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin-left: -100%;
+}
+.a{
+    text-align: center;
+}
+.right{
+    float: left;
+    width: 400px;
+    margin-left: -400px;
+    height: 200px;
+    background-color: yellow;
+}
+  </style>
+</head>
+<body>
+ <div class="header">双飞翼布局</div>
+ <div class="bd">
+        <div class="a">
+   <div class="main text">
+   
+
+        <div class="main-container">
+            我是一只小小鸟
+        </div>
+    </div> 
+   </div>
+   <div class="left text"> 我是一只小小鸟</div>
+   <div class="right text"> 我是一只小小鸟</div>
+ </div> 
+</body>
+</html>

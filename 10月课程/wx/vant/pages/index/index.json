@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "Vant Weapp",
+  "usingComponents":{
+    "van-panenl":"../../vant-weapp/panel/index",
+    "van-cell":"../../vant-weapp/cell/index",
+    "van-group": "../../vant-weapp/cell-group/index"
+  },
+  "enablePullDownRefresh": true,
+  "onReachButtonDistance":100
+}

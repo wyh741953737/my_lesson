@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>地球旋转</title>
+    <style>
+    #container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    z-index: 999;
+  }</style>
+</head>
+<body>
+    <script>
+    const container=document.querySelector('container');
+    let canvas,stats,camera,scene,renderer,group;
+
+    let mouseX=0;
+    let mouseY=0;
+    let windowHalfX=window.innerWidth/2;
+   let windowHalfY=window.innerHeight/2;
+   // console.log(windowHalfX,windowHalfY);
+   function init()
+   {
+canvas=document.getElementById('webglcanvas');
+camera=new THREE.perspectiveCamera(60,window.innerWidth/window.innerHeight,1,2000);
+camera.position.z=500;
+scene=new THREE.Scene();
+scene.background=new THREE.color(0xfffff);
+group=new THREE.Group();
+svene.add(group);
+//scene<-group<-mesh;
+const loader=new THREE.TextureLoader();//文本材质加载器
+loader.load('land_ocean_ice_cloud_2048.jpg',function(texture){
+    const geometry=new THREE.SphereGeometry(200,20,20);//Geometry几何体
+    const meterial=new THREE.MeshBasicMeterial({
+        map:texture
+    })
+    const mesh=new THREE.Mesh(geometry,material);
+    group.add(mesh);
+
+})
+renderer=new THREE.WebGLRenderer(
+    {
+        canvas:canvas,antialias:true
+    }
+) ; 
+renderer.serSize(window.innerWidth,window.innerHeight);
+stats=new stats();
+container.appendChild(stats.dom);
+
+ }
+window.onload=function()
+{
+    animate()
+    init();
+window.addEventListener('resize',onWindowResize,false);
+document.addEventListener('mousemove',onDocumentMouseMove,false);
+}
+function animate()
+{
+    requestAnimationFrame(animate);//内置动态刷新，请求运动帧更新
+    render();
+    stats.update();
+
+}
+function render()
+{
+    camera.position.x+=(mouseX-camera.position.x)*0.05 ;
+    camera.position.y+=(-mouseY-camera.position.y)*0.05;
+    camera.lookAt(scene.position);
+    render.render(scene,camera);
+}
+function onWindowResize()
+{
+    windowHalfX=window.innerWidth/2;
+    windowHalfY=window.innerHeight/2;
+    console.log(windowHalfX,windowHalfY);
+}
+function onDocumentMouseMove(event)
+{   mouseY=event.clienY-windowHalfY;
+    mouseX=event.clientX-windowHalfX;
+    console.log(mouseX,mouseY);
+}
+</script>
+    <div id="container"></div>
+    <canvas id="webglcanvas"></canvas>
+    
+    <script src="./libs/three.min.js">   </script>
+    <script src="./libs/stats.min.js">   </script>
+</body>
+</html>
+

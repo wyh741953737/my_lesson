@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   <link href="" rel=""/> 
+   
+</head>
+<body>
+    <div class="box">
+    <div class="username"></div>
+    <div class="motto"></div>
+   </div>
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> -->
+    <script>
+            //script是一个阻塞型标签，不建议放在头部
+        //const eleUsername=document.querySelector('username');
+        // console.log(username);
+        //domReady时间 ，比window.onload早一些
+        // $(function(){
+        //     const eleUsername=document.querySelector('username');
+        //      console.log(eleUsername);
+        // })
+        //$传一个函数，运行        window onload推迟执行
+        // document.addEventListener('DOMContentLoaded',function(){
+        //     console.log('domcontentloaded');
+
+        // });
+        // window.onload=function()
+        // {
+        //     console.log('load');
+
+        // }
+    //     $(function(){
+    //         $('.username').html('little sea');
+    // });
+    // function $(arg){
+    //     if(typeof arg==='string'){
+
+    //     }else if(typeof arg==='function'){
+    //         document.addEventListener
+    //     }
+    // }
+    // $(function(){
+    //     $.getJSON('/dream.json',function(data){
+    //         console.log(data);
+    //         $('.username').html(data.username);
+    //         $('.motto').html(data.motto);
+
+    //     })e
+    // });
+    console.log('m');
+    // document.addEventListener('DOMContentLoaded', function() {
+    //         document.removeEventListener('DOMContentLoaded',arguments.callee, false);
+    //         fn();
+    //     }, false);
+    document.addEventListener('DOMContentLoaded',function(){
+        // console.log('loaded');
+        
+
+        const oUsername=document.querySelector('.username');
+        const eleMotto=document.querySelector('.motto');
+        let xhr=null;//异步js 主动拉取的核心对象 Ajax
+        // 浏览器嗅探
+
+        if(window.XMLHttpRequest){
+            xhr=new XMLHttpRequest();
+        }else{
+            //old browser
+            xhr= new ActiveXObject('Microsoft.XMLHttp');
+
+        }
+        //页面打开一个去url的通道· json资源，后端数据服务，的·通道
+        xhr.open('get','/dream.json',true);
+        xhr.send();
+        xhr.onreadystatechange=function(){
+           console.log(xhr.status);
+            if(xhr.readyState===4 && xhr.status==200)
+            {
+                console.log( typeof xhr.responseText);
+                const dream=JSON.parse(xhr.responseText);
+                console.log(dream);
+                eleUsername.innerHTML=dream.username;
+                eleMotto.innerHTML=dream.eleMotto;
+            }
+        }
+    })  ;
+    
+      </script>
+</body>
+</html>

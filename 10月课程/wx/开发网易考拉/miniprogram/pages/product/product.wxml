@@ -1,0 +1,64 @@
+<view class="container">
+<swiper style='width:80%;position:relative;height:350px;margin-left:10%;'indicator-dots='true' autoplay='true'>
+<swiper-item>
+<image src='https://gd1.alicdn.com/imgextra/i1/838260252/O1CN01R6aQss1DjSI9yHB3s_!!838260252.jpg'></image>
+</swiper-item>
+<swiper-item>
+<image src='https://gd3.alicdn.com/imgextra/i4/2185784863/O1CN01zHxCle1lnIXzdEIOt_!!2185784863.jpg_400x400.jpg'></image>
+</swiper-item>
+<swiper-item>
+<image src='https://gd4.alicdn.com/imgextra/i4/838260252/O1CN01xKHiBh1DjSI2O8sZH_!!838260252.jpg'></image>
+</swiper-item>
+<swiper-item>
+<image src='https://gd4.alicdn.com/imgextra/i4/249815016/TB2tRg1q49YBuNjy0FfXXXIsVXa_!!249815016.jpg'></image>
+</swiper-item>
+<swiper-item>
+<image src='https://gd2.alicdn.com/imgextra/i2/2185784863/O1CN01E6WwnM1lnIXz1Dflv_!!2185784863.jpg'></image>
+</swiper-item>
+</swiper>
+
+<view class='swiper-button'>
+<view class='price'>
+<text class='symbol'>￥</text>
+<text >120</text>
+<text class='form-price'>￥170</text>
+</view>
+<view class='discount'><view>特价</view></view>
+<view class='share'>
+ 
+</view>
+</view>
+
+<view class='description'>
+<text class='text1'>LANCOME 兰蔻 玫瑰露清滢柔肤粉水  400毫升 干皮真爱</text>
+</view>
+<view class='description'>
+<text class='text2'>夏季的烈日，冬季的妖风都让干皮妹子们深深苦恼。这瓶兰蔻粉水专为干燥肌肤而设。质地是滋润的水乳状，带有淡淡的玫瑰香气。上脸后轻轻拍打几下就被肌肤吸收，用完后感觉肌肤亮了一个度，脸蛋像喝饱水一样细腻柔滑。</text>
+</view>
+<view class='pinpai'>
+<view class='pinpai-1'>法国品牌</view>
+<view class='pinpai-1'>网易自营</view>
+</view>
+<view class='grey'></view>
+<view class='descrip-others'>
+<view class='cuxiao'>
+<view><text>促销：</text></view>
+<view class='cuxiao-2'><text>[赠品]Hiruscar 喜辽复 化妆包</text></view>
+</view>
+<view class='peisong'>
+<view class='peisong-1'><text>配送：</text></view>
+<view class='peisong-2'>
+<view class='peisong-2-1'>配送至</view>
+<view class='peisong-2-1'>24:00前完成支付，预计12月14日（周五）送达</view>
+</view>
+</view>
+<view class='cuxiao'>
+<view><text>运费：</text></view>
+<view class='yunfei-2'><text>满88元免邮费</text></view>
+</view>
+<view class='peisong'>
+<view><text>说明：</text></view>
+<view class='cuxiao-2'><text>[赠品]Hiruscar 喜辽复 化妆包</text></view>
+</view>
+</view>
+</view>

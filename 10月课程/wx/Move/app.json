@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/new/new"
+  ],p
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "red",
+    "navigationBarTitleText": "时尚新闻",
+    "navigationBarTextStyle":"black"
+  }
+}

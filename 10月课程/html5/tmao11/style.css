@@ -1,0 +1,73 @@
+/* 10rem  宽度 10rem 
+1rem = 1/10 宽度 */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  .html_content, .item-section {
+    height: 100%;
+  }
+  .item-section{
+  
+    position: relative;
+    min-height: 100%;
+  }
+  .item-section_header img {
+    width: 10rem;
+  }
+  ul,li{
+      list-style:none;
+
+  }
+  .item-section ul{
+      padding: 0.133333rem;
+  }
+  
+  .flag{
+    
+      width: 100%;
+      margin-bottom: 1px;
+      background: #ffffff;;
+  }
+  .flag img {
+    width: 0.23466666667rem;
+    height:0.23466666667rem;
+    padding-top: 20px;
+
+  }
+  .figcaption{
+    display: inline-block;
+    width: 0.9253333333rem;
+    height: 0.233333333rem;
+    margin-top: 20px;
+   position: absolute;
+   margin-left: 16px;
+  }
+  .flag-title, .flag-descrip, .flag-sell{
+    line-height: 48px;
+     width: 100%;
+     display: flex;
+     }
+     .flag-title{
+background-color: pink;
+
+     }
+     .flag-descrip{
+      
+     }
+     .flag-sell{
+      
+     }
+     .flag-price{
+       background-color: red;
+       
+     }
+       
+      
+       
+     }
+

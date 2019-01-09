@@ -1,0 +1,21 @@
+{
+  "name": "npm-hello_script",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:js": "eslink *.js",
+    "lint:css": "stylelint *.less",
+    "test": "npm-run-all --parallel lint:*"
+  },
+  "keywords": [],
+  "author": "wyh741953737 <741953737@qq.com> (git@github.com:wyh741953737/qm_lesson.git)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.3"
+  }
+}
