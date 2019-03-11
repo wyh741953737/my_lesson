@@ -27,3 +27,12 @@ env2 绑我们将.env装读取为配置
 
 mysql2第二个版本 负责数据库连接，数据驱动。翻译工作
 node js逻辑，
+。
+
+\node_modules\.bin\sequelize db:create 创建数据库
+\node_modules\.bin\sequelize migration:create --name create-shops-table 创建数据表
+
+
+yarn add hapi-redis@6
+
+mysql -uroot -p

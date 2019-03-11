@@ -1,0 +1,7 @@
+<template name="movieTemplate">
+<view class='movie-container'>
+<image class='movie-img' src="../../../images/share.png"/>
+<text class='movie-title'>美女与野兽</text>
+<template is="starTemplate" data="{{stars:star,average:average}}"/>
+</view>
+</template>

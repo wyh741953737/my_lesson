@@ -1,39 +1,18 @@
 BFC 给父元素加上overflow：hidden 可以创建一个格式化上下文环境，定义它可得到子元素的高度
-
-stylus 
-css 预编译系统 写的。styl文件 stylus编译成css文件
-
-stylus style.styl -o css.css
-使用stylus编译。styl文件 输出css.css
-stylus 构建css开发工作流程
-代码写在。style文件中
-浏览器要的是。css文件
-stylus -w style.styl -o style.css
-live-server 监听css 文件高度改变自动刷新
-
-weui结合小程序
-weui是微信like的界面解决方案，适用于公众号，
-引入weui.wxcss文件
-来到weui组件官网，要哪个，用哪个，覆盖了70%的常用组件
-
-MVVM 
-M 数据 模型
-V  页面 视图
-vM 数据绑定到界面上 视图模型 =>模板{{}}
+stylus css 预编译系统 写的。styl文件 stylus编译成css文件stylus style.styl -o css.css
+使用stylus编译。styl文件 输出css.cssstylus 构建css开发工作流程代码写在。style文件中
+浏览器要的是。css文件stylus -w style.styl -o style.csslive-server 监听css 文件高度改变自动刷新
+weui结合小程序weui是微信like的界面解决方案，适用于公众号，引入weui.wxcss文件来到weui组件官网，要哪个，用哪个，覆盖了70%的常用组件MVVM M 数据 模型V  页面 视图vM 数据绑定到界面上 视图模型 =>模板{{}}
 
 几种状态
 username 数据 输入前，输入后，状态改变带来数据的改变 维护状态
-inpu 视图
-数据跟input 步调一致
-拒绝使用dom查询
-
+inpu 视图数据跟input 步调一致拒绝使用dom查询
 
 手机尺寸
 px 在手机端有问题
 css 像素 px retina 750px 
 硬件物理尺寸
-iphone8 375pt
-8plus    414pt
+iphone8 375pt     8plus    414pt
 
 相对单位
 rem 相对于html上设置的font-size
@@ -53,15 +32,11 @@ rwd 自适应网页
 嵌套给css带来模块化的概念
 一个模块下的组织，统一组织
 苹果头部高度44
-
-
 算大小，精确
 h2 lh 整站风格 13px 18px 1.3846；行高用比例 
 。box padding-left 18px pt  12px 
 优先考虑模块的复用，设计师会在风格，用户品味，设计规律方面，有经验的重复
 svg使用数学模型 无限放大 。。。。
-
-after 伪元素
 
 
 1.分析布局+建立html结构

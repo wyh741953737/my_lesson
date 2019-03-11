@@ -1,0 +1,22 @@
+
+ <view class='news-detail-container'>
+ <!-- <view>{{authorname}}</view> -->
+ <image class='head-img' src="{{articleImg}}"></image>
+ <view class='author-time'>
+ <image class='author-avator' src="{{authoricon}}"></image>
+ <text class='author-name'>{{authorname}}</text>
+ <text class='const-text'>发表于</text>
+<text class='time'>{{data}}</text>
+<image class='playermusic' catchtap='playmusicTap' src="{{isplayer?'../../../images/playing.png':'../../../images/notplay.png'}}"></image>
+ </view>
+ <text class='title'>title,nhygjgtgfvhgfv</text>
+ <view class='tool'>
+ <view class='circle-img'>
+ <image wx:if="{{collected}}" catchtap="collectTap" src='../../../images/zanle.png'></image>
+ <image wx:else catchtap="collectTap"  src='../../../images/weizan.png'></image>
+ <image catchtap="onshare" class='share-img' src='../../../images/share.png'></image>
+ </view>
+ <view class='horizon'></view>
+</view>
+<text class='detail'>哈哈哈</text>
+</view>

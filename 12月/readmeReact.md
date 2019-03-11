@@ -1,5 +1,0 @@
-react能够实现服务器端的渲染，便于搜索引擎优化，这一点比其他Backbone,Angular强。
-react只是MVC中view层，一切都是component，所以大妈比较模块化
-react 主要用于：构建大型应用
-响应式更新非常简单，DOM更新通常比较昂贵，React为了尽可能减少对DOM操作，提供一种强大方式更新DOM，替代直接DOM的操作：Virtual DOM。一个轻量级的虚拟DOM，React抽象出来的对象。
-为什么通过这一层virtual DOM就能更快？React有一个diff算法，更新 VirtualDom并不能马上影响真实DOM，React会等到事件循环结束，利用diff算法，通过当前新的Dom表述与之前比较，计算出最小步骤更新真实DOM。只更新改变部分

@@ -22,8 +22,8 @@ click 很慢，是来自pc的点击，mobile tap
 
 block-level elements (块级元素) 和 inline elements (内联元素)。block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。
 
-常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。
-常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。
+常见的块级元素有 div, form, table, P, pre, h1~h6, dl, ol,ul 等。
+常见的内联元素有 Span, a,strong,em, lable, input, select, textarea, img,br 等。
 block元素可以包含block元素和inline元素；但inline元素只能包含inline元素。要注意的是这个是个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如 P 元素，只能包含inline元素，而不能包含block元素。
 一般来说，可以通过display:inline和display:block的设置，改变元素的布局级别。
 

@@ -1,0 +1,17 @@
+{
+  "pages": [
+        "pages/index/index",
+    "pages/index/news-detail/news-detail",
+"pages/index/movie/movie",
+   
+    "pages/logs/logs",
+   
+    "pages/index/movie/star-template/star-template"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

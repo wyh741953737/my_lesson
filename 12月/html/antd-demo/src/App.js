@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import Button from 'antd/lib/button';
 import { Table, Form, Icon, Input, Button } from 'antd';
 import './App.css';
-const FormItem = Form.FormItem;
+ const FormItem = Form.FormItem;
 
 class App extends Component {
   state = {
@@ -46,11 +46,59 @@ class App extends Component {
       name: '吴彦祖',
       age: 42,
       address: '香港'
+    },{
+      key: '1',
+      name: '胡彦斌',
+      age: 32,
+      address: '朝阳区'
+    }, {
+      key: '2',
+      name: '吴彦祖',
+      age: 42,
+      address: '香港'
+    },{
+      key: '1',
+      name: '胡彦斌',
+      age: 32,
+      address: '朝阳区'
+    }, {
+      key: '2',
+      name: '吴彦祖',
+      age: 42,
+      address: '香港'
+    },{
+      key: '1',
+      name: '胡彦斌',
+      age: 32,
+      address: '朝阳区'
+    }, {
+      key: '2',
+      name: '吴彦祖',
+      age: 42,
+      address: '香港'
+    },{
+      key: '1',
+      name: '胡彦斌',
+      age: 32,
+      address: '朝阳区'
+    }, {
+      key: '2',
+      name: '吴彦祖',
+      age: 42,
+      address: '香港'
+    },{
+      key: '1',
+      name: '胡彦斌',
+      age: 32,
+      address: '朝阳区'
+    }, {
+      key: '2',
+      name: '吴彦祖',
+      age: 42,
+      address: '香港'
     }]
-    
     return (
       <div>
-
         <Form layout="inline" onSubmit={this.handleSubmit}>
           {/* <FormItem> */}
             <Input placeholder="Username"

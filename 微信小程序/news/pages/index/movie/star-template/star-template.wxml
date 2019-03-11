@@ -1,0 +1,10 @@
+<template name="starTemplate">
+<view class='stars-container'>
+<view class='stars'>
+<image src="../../../../images/weizan.png"></image>
+<image src="../../../../images/weizan.png"></image>
+<image src="../../../../images/weizan.png"></image>
+<image src="../../../../images/weizan.png"></image>
+</view>
+</view>
+</template>

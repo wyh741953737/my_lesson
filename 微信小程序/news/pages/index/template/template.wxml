@@ -1,0 +1,19 @@
+
+<template name="useTemplate">
+ <view class='articlelist'>
+ <view class='author-time'>
+ <image class='author-icon' src='{{authorIcon}}'></image>
+ <text class='author'>{{authorname}}</text>
+ <text class='data'>{{data}}</text>
+ </view>
+ <text class='title'>{{title}}</text>
+ <image class='articleimg' src='{{articleImg}}'></image>
+ <text class='articletext'>{{articleText}}</text>
+ <view class='article-like'>
+ <image class='article-like-icon' src='../../images/zan.png'></image>
+ <text class='article-like-text'>{{articleLikeSC}}</text>
+  <image class='article-like-icon' src='../../images/p.jpg'></image>
+  <text class='article-like-text'>{{articleLikeComment}}</text>
+</view>
+</view>
+</template>

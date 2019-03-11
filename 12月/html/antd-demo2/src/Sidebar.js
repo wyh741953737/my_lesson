@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
 import { sidebarData, groupKey } from './SidebarData';
-
-const { Sider } = Layout;
-const { SubMenu, Item} = Menu;
+const {Sider} =Layout;
+const {SubMenu,Item}=Menu;
 class Sidebar extends Component {
   state = {
     openKeys: [''],

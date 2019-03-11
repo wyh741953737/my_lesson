@@ -1,6 +1,4 @@
 import React from "react";
-
-
 import { render } from "react-dom";
 import { createStore, applyMiddleware } from "redux";
 //引入redux-devtools-extension的可视化工具（有点吊）

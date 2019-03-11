@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Modal from './modal/modal.jsx'
 import './App.css';
-
 class App extends Component {
   state = {
     visible:false

@@ -1,0 +1,2 @@
+/* pages/index/movie/movie.wxss */
+@import"movie-list-template/movie-list-temolate.wxss";
