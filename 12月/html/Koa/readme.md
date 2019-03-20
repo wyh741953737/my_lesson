@@ -14,3 +14,5 @@ router.get('/',(ctx,next)=>{})
 
 mongoose处理mongodb 
 mongose.connect('mongodb://localhost/test',{useUrlParser:true},()=>{})
+npm i koa-views --save
+npm i handlebars -- save
