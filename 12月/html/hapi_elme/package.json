@@ -15,7 +15,7 @@
     "hapi-swagger": "7",
     "inert": "4",
     "package": "^1.0.1",
-    "sequelize": "^4.42.0",
+    "sequelize": "^5.15.1",
     "vision": "4"
   }
 }
