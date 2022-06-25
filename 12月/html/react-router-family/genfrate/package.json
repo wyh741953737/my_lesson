@@ -10,6 +10,6 @@
   "author": "wyh741953737 <741953737@qq.com> (git@github.com:wyh741953737/qm_lesson.git)",
   "license": "MIT",
   "dependencies": {
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.6.7"
   }
 }
